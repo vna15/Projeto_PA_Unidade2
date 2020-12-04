@@ -30,11 +30,9 @@ std::vector<FiguraGeometrica*> Interpretador::parse(std::string filename){
 
     while(fin.good()){
         std::getline(fin,s);
-        if(fin.good()){
             ss.clear();
             ss.str(s);
             ss >> token;
-            if(ss.good()){
                 if(token.compare("dim")==0){
                     ss >> dimx >> dimy >> dimz;
                 }
@@ -78,8 +76,6 @@ std::vector<FiguraGeometrica*> Interpretador::parse(std::string filename){
                     ss >> xcenter >> ycenter >> zcenter >> rx >> ry >> rz;
                     figs.push_back(new CutEllipsoid(xcenter,ycenter,zcenter,rx,ry,rz));
                 }
-            }
-        }
     }
     return(figs);
 }
