@@ -22,7 +22,6 @@ public:
   void putVoxel(int x, int y, int z);
   void cutVoxel(int x, int y, int z);
   void writeOFF(char* filename);
-  //void limpaVoxels();
 };
 
 #endif // SCULPTOR_H
